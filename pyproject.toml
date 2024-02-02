@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "coinslib"
+version = "0.1.0"
+description = "Package for interacting with full RPC nodes"
+authors = ["vsaverin <vasiliy.saverin@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+web3 = "^6.15.0"
+eth-account = "^0.10.0"
+tronpy = "^0.4.0"
+hexbytes = "^1.0.0"
+aiohttp = "^3.9.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

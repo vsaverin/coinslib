@@ -1,0 +1,66 @@
+/config.yml
+.idea
+../.idea
+trash/.env
+venv
+localvenv
+trash
+.ipynb_checkpoints
+.mypy_cache
+.vscode
+.ruff_cache
+__pycache__
+.pytest_cache
+htmlcov
+dist
+site
+.coverage
+coverage.xml
+.netlify
+test.db
+log.txt
+Pipfile.lock
+env3.*
+env
+docs_build
+site_build
+docs.zip
+archive.zip
+
+# vim temporary files
+*~
+.*.sw?
+.cache
+.pyc
+# macOS
+.DS_Store
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+firebase.json
+config.yml
