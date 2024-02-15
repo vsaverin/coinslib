@@ -27,10 +27,8 @@ class DogeRPCProvider(BitcoinLikeProvider):
     async def _get_transaction_category(self, details: list[dict]) -> str:
         send = await self._send_in_transaction(details)
         receive = await self._receive_in_transaction(details)
-        # Если в транзакциях только отправка, это вывод средств
         if send and not receive:
             return {"type": "send", "amount": send.get("amount")}
-        # Если только получение, это ввод с внешнего кошелька
         if receive and not send:
             return {
                 "type": "receive",
@@ -38,7 +36,6 @@ class DogeRPCProvider(BitcoinLikeProvider):
                 "receive_amount": receive.get("amount"),
                 "address": receive.get("address"),
             }
-        # Если есть отправитель main и получатель, это вывод на др. TW
         if send.get("account") == "main" and receive:
             return {
                 "type": "send_and_receive",
@@ -47,7 +44,6 @@ class DogeRPCProvider(BitcoinLikeProvider):
                 "receive_amount": receive.get("amount"),
                 "address": receive.get("address"),
             }
-        # Если есть отправитель НЕ main, а получатель main, это внутр. транзит
         if send.get("account") != "main" and receive.get("account") == "main":
             return {"type": "transit"}
 
