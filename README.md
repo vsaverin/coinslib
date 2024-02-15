@@ -37,8 +37,6 @@ If you encounter any issues or have suggestions for improvements, please feel fr
 - `get_confs(txid: str) -> int`
 - `get_unspent_wallet_data(tag: str, repository) -> dict`
 
-I apologize for the oversight. Here is the concise format for the `EtherLikeService` class:
-
 ## EtherLikeService Class
 
 ### Methods
